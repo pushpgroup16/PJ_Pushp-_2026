@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pushp Group | Brands in Sight</title>
+    
+    <!-- 1. BULLETPROOF TAILWIND CDN IMPORT -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. OUR CUSTOM BRAND CONFIGURATION -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pushp: {
+                navy: '#0B3B60',
+                red: '#D32F2F',
+                yellow: '#FBC02D',
+                light: '#F8FAFC',
+                dark: '#1E293B',
+              }
+            },
+            animation: {
+              'marquee': 'marquee 35s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
